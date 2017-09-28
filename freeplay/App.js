@@ -11,7 +11,12 @@ export default class App extends React.Component {
     return (
       <View style={styles.container}>
         <View style={{position: 'absolute', top: 0, width: 25, height: 580, backgroundColor: 'grey'}} />
-        <Interactable.View>
+        <Interactable.View
+          gravityPoints={[{x: 0, y: 200, strength: 150, falloff: 800, damping: 0.5}]}
+          initialPosition={{x: 0, y: 400}}
+          verticalOnly={true}
+          boundaries={{top: -400, bottom: 200, bounce: 0.5}}
+        >
           <View style={{backgroundColor: 'red', width: 100, height: 100, borderRadius: 10005}} />
         </Interactable.View>
       </View>
