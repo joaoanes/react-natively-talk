@@ -33,6 +33,15 @@ export default class App extends React.Component {
     return (
       <View style={styles.container}>
         <View style={{position: 'absolute', top: 0, width: 25, height: 580, backgroundColor: 'grey'}} />
+
+        <Text style={{position: 'absolute', fontSize: 40, top: 10}}>
+          {Math.trunc(this.state.maxY)}
+        </Text>
+
+        <Text style={{position: 'absolute', fontSize: 40, bottom: 10}}>
+          {Math.trunc(this.state.y)}
+        </Text>
+
         <Interactable.View
           ref='ball'
           onDrag={this.checkMax}
