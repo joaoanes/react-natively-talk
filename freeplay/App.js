@@ -10,9 +10,9 @@ export default class App extends React.Component {
   constructor() {
     super()
 
-    this.velocity = {x: 0, y: 0, z: 0}
     this.state = {
-      maxY : 0
+      maxY : 0,
+      y: 0
     }
 
     gyroObservable
@@ -23,6 +23,7 @@ export default class App extends React.Component {
   }
 
   checkMax = ({nativeEvent: {x, y}}) => {
+    this.setState({y: -y+200})
     if (-y+200 > this.state.maxY) {
       this.setState({maxY: -y+200}) //y starts at 400
     }
@@ -34,7 +35,11 @@ export default class App extends React.Component {
         <View style={{position: 'absolute', top: 0, width: 25, height: 580, backgroundColor: 'grey'}} />
 
         <Text style={{position: 'absolute', fontSize: 40, top: 10}}>
-          {this.state.maxY}
+          {Math.trunc(this.state.maxY)}
+        </Text>
+
+        <Text style={{position: 'absolute', fontSize: 40, bottom: 10}}>
+          {Math.trunc(this.state.y)}
         </Text>
 
         <Interactable.View
