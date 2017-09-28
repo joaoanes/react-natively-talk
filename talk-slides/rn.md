@@ -30,7 +30,7 @@ Note: windows mobile is dead, so I can use the word "cross-platform"
 
 
 ## Evaluation criteria
-1. How is your code written/represented? <!-- .element: class="fragment" -->
+1. How is your application flow written/represented? <!-- .element: class="fragment" -->
 1. How is your code ran, and by what? <!-- .element: class="fragment" -->
 1. Who renders the user interface, and how? <!-- .element: class="fragment" -->
 
@@ -61,8 +61,8 @@ Note: sure, you can bundle your own webview, like the crosswalk project, ionic i
 > A Javascript library for building user interfaces
 
 
-> React is an unopinionated, declarative way to describe UI.
-Note: React is only concerned with the view, unopinionated about anything else
+> React is a library to declaratively to describe and structure UI.
+
 
 
 ```
@@ -89,7 +89,8 @@ Note: this needs containment
   ...
 </Content>
 ```
-Note: this is JSX - segue "what if we want a list of profiles?"
+Tons more readable!
+Note: INSTEAD OF MEANINGLESS DIVS, COMPONENTS WITH MEANING
 
 
 ```
@@ -102,20 +103,50 @@ Note: this is JSX - segue "what if we want a list of profiles?"
 </ScrollableList>
 ```
 
-But react isn't just about extracting elements into modules.
+
+> How the UI changes is up to you.
+Note: React is only concerned with the view, unopinionated about anything else
+
+
+### React isn't just about extracting elements into modules!
+
+* Reusability <!-- .element: class="fragment" -->
+* Modulability <!-- .element: class="fragment" -->
+* Scope <!-- .element: class="fragment" -->
+Note: SIMPLICITY
 
 
 ## React Component
-> reusable, modular, scoped
-Note: you can bundle up entire functionality in a single component, and you can compose that into other components if you so choose
+> Just a function (or a class) that given a state, renders that state
 
 
 ## React Component
 Large open-source scene, thousands of reusable components
+  <div class="fragment fade-in">
+      * https://js.coach
+      * https://github.com/jondot/awesome-react-native#components
+      * https://github.com/react-native-training/react-native-elements
+  </div>
+
+
 
 
 But enough of that, what about the native?
 
+
+## What is react native?
+
+Implementation-wise, RN is a custom screen that reads a js file to know what, when and where to draw.
+
+This is a massive oversimplification please don't hurt me <!-- .element: style="font-size: 15px; " -->
+Note: RENDERS A SINGLE COMPONENT WHERE YOUR APP LIVES
+
+
+## But what about using the OS APIs?
+
+Native modules!
+
+React Native has some by default, but you can roll out your own, just implement an interface!
 
 
 ## Best features
@@ -153,10 +184,9 @@ Note: and reactotron, others. Developer happiness is a core goal of the project.
 1. Can be dropped in existant native apps
 
 <div style="position: relative; margin-top: 20px">
-  <div style="position: absolute" class="fragment fade-out">RN lives as a drop-in Activity or ViewController if you want it to.</div>
+  <div style="position: absolute" class="fragment fade-out">Since RN exists as a drop-in Activity or ViewController.</div>
   <div class="fragment fade-in">You can integrate your existant native modules with the bridge.</div>
 </div>
-Note: Need a camera? There's a module for that!
 
 
 ## Best features
@@ -223,14 +253,6 @@ Note: There's a lot of proxying and adapting in react, which leads to overhead, 
 
 ## Worst features
 
-1. Iffy licensing
-
-Patents involved. Legal departments might be concerned.
-Note: React is patented, and that patent terminates as soon as you file a lawsuit alleging patent infringement. Iffy.
-
-
-## Worst features
-
 1. Long dependency chain
 
 That's a lot to break compared to native toolkits.
@@ -251,11 +273,20 @@ That's a lot to break compared to native toolkits.
 Note: There's been some talk about Facebook leaving RN as big companies often do.
 
 
-# End notes
+# Testing
+
+Jest!
 Note: Testing using Jest, snapshots, CI solutions
 
 
 ## Should you use React?
 
-It depends.
-Note: Webdevs can be mobile devs now! It certainly is easier than teaching them Swift!
+It depends, but take the plunge!
+
+> $ npm install -g create-react-native-app
+> $ create-react-native-app my-app
+Note: WEBDEVS -> REACT -> REACT-NATIVE
+
+
+
+# THANKS!
