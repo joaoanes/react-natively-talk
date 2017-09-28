@@ -290,3 +290,4 @@ Note: WEBDEVS -> REACT -> REACT-NATIVE
 
 
 # THANKS!
+Get the code and presentation at https://github.com/joaoanes/react-natively-talk
