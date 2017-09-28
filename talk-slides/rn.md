@@ -6,7 +6,7 @@ Or how to make mobile development bearable again
 > "a framework that will wholly replace mobile development as we know it today."
 
 
-![They're hopeful, to say the least.](img/yes.png)
+![They're hopeful, to say the least.](./img/yes.png)
 Note: how?
 
 
