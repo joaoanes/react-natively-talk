@@ -1,5 +1,5 @@
 # REACT NATIVE <!-- .element: style="color:white" -->
-<!-- .slide: data-background-image="/img/bg.gif" style="color:white"-->
+<!-- .slide: data-background-image="img/bg.gif" style="color:white"-->
 Or how to make mobile development bearable again
 
 
